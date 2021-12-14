@@ -13,10 +13,10 @@ namespace TDConsoleApp
 
     class TacoOrder
     {
-        readonly private string _customerName;
-        readonly private TacoFilling _filling;
-        readonly private TacoSide _side;
-        readonly private TacoSalsa _salsa;
+        private string _customerName;
+        private TacoFilling _filling;
+        private TacoSide _side;
+        private TacoSalsa _salsa;
 
         // Constructor method
         public TacoOrder(string customerName, TacoFilling filling, TacoSide side, TacoSalsa salsa)
@@ -30,21 +30,18 @@ namespace TDConsoleApp
         // Getters
         // Methods to return instance variables
 
-        // Get _customerName
-        // Get _filling
-        // Get _side
-        // Get _salsa
-
-
-
+        public string GetCustomerName() => _customerName;
+        public TacoFilling GetTacoFilling() => _filling;
+        public TacoSide GetTacoSide() => _side;
+        public TacoSalsa GetTacoSalsa() => _salsa;
 
         // Setters
         // Methods to set instance variables
-        // Set _customerName
-        // Get _filling
-        // Get _side
-        // Get _salsa
 
+        public void SetCustomerName(string value) => _customerName = value;
+        public void SetTacoFilling(TacoFilling value) => _filling = value;
+        public void SetTacoSide(TacoSide value) => _side = value;
+        public void SetTacoSalsa(TacoSalsa value) => _salsa = value;
 
 
 
@@ -56,9 +53,7 @@ namespace TDConsoleApp
 
     }
 
-    // Add accessibility modifiers to enums.
-
-    enum TacoFilling
+    public enum TacoFilling
     {
         CarneAsada,
         Carnitas,
@@ -66,7 +61,7 @@ namespace TDConsoleApp
         GrilledChicken
     }
 
-    enum TacoSide
+    public enum TacoSide
     {
         Rice,
         BlackBeans,
@@ -74,7 +69,7 @@ namespace TDConsoleApp
         BorrachoBeans
     }
 
-    enum TacoSalsa
+    public enum TacoSalsa
     {
         PicoDeGallo,
         SalsaRoja,
