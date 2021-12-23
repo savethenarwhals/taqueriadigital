@@ -6,18 +6,20 @@
         private TacoFilling _filling;
         private TacoSide _side;
         private TacoSalsa _salsa;
+        private int _tacoQuantity;
 
         // Constructor method
-        public TacoOrder(string customerName, TacoFilling filling, TacoSide side, TacoSalsa salsa)
+        public TacoOrder(string customerName, TacoFilling filling, TacoSide side, TacoSalsa salsa, int tacoQuantity)
         {
             _customerName = customerName;
             _filling = filling;
             _side = side;
             _salsa = salsa;
+            _tacoQuantity = tacoQuantity;
+
         }
 
         // Add properties
-
 
 
         // Getters
@@ -27,6 +29,7 @@
         public TacoFilling GetTacoFilling() => _filling;
         public TacoSide GetTacoSide() => _side;
         public TacoSalsa GetTacoSalsa() => _salsa;
+        public int GetTacoQuantity() => _tacoQuantity;
 
         // Setters
         // Methods to set instance variables
@@ -35,14 +38,9 @@
         public void SetTacoFilling(TacoFilling value) => _filling = value;
         public void SetTacoSide(TacoSide value) => _side = value;
         public void SetTacoSalsa(TacoSalsa value) => _salsa = value;
-
+        public void SetTacoQuantity(int value) => _tacoQuantity = value;
 
         // Methods
-
-        public string displayTacoOrder()
-        {
-            return ($"Customer Name: {_customerName}\nTaco Filling: {_filling}\nTaco Side: {_side}\nTaco Salsa: {_salsa}");
-        }
 
     }
 }

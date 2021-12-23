@@ -2,15 +2,13 @@
 
 namespace TDConsoleApp
 {
+    
     class Program
     {
         static void Main(string[] args)
         {
 
-            // Need to convert this to a method that creates a new instance
-            // Ask user for fields.
-
-
+            
             // Console UI
             // Add titles
             DisplayTitleUI();
@@ -20,31 +18,13 @@ namespace TDConsoleApp
             // Give users a menu of what you want them to choose
 
 
-
-            // You can use a do/while loop that keeps looping until
-            // the user makes a choice to quit the program.
-
-
-
-
-
+           
             // Certain choices will call different methods. i.e. Place an order, etc.
             // Place order
 
 
-
-
-
-
-
-
-
             //TacoOrder tacoCustomer1 = new("Angelina Jolie", TacoFilling.CarneAsada, TacoSide.BlackBeans, TacoSalsa.SalsaRoja);
             //Console.WriteLine(tacoCustomer1.displayTacoOrder());
-
-
-
-
 
 
 
@@ -87,7 +67,7 @@ namespace TDConsoleApp
                 }
             } while (userChoice != "4");
 
-            Console.WriteLine("\nThank you for your order!");
+            Console.WriteLine("\nThank you for choosing Taqueria Digital!");
         }
 
         private static void showCurrentOrder()
@@ -97,7 +77,21 @@ namespace TDConsoleApp
 
         private static void placeCustomerOrder()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Place order:");
+            Console.WriteLine();
+
+            // Filling input
+            Console.WriteLine("What is the savory foundation you'd like to build your tacos upon?");
+
+            // Side input
+            Console.WriteLine("How about the life-changing yin to your *TacoFilling* taco's yang?");
+
+            // Salsa input
+            Console.WriteLine("Your *TacoFiling* and *TacoSide* taco must have salsa. Unless it kills you, you're getting f*cking salsa.");
+
+            // Quantity input
+            Console.WriteLine("How many pillows of bliss should we make for you?");
+
         }
 
         private static void DisplayTitleUI()
