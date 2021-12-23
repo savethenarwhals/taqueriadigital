@@ -63,13 +63,13 @@ namespace TDConsoleApp
 
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            Console.Write("Choose and option number and press Enter: ");
-            string userChoice = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine(userChoice);
+            string userChoice;
 
             do
             {
+                Console.Write("Choose an option number and press Enter: ");
+                userChoice = Console.ReadLine();
+
                 switch (userChoice)
                 {
                     case "1": 
@@ -79,15 +79,15 @@ namespace TDConsoleApp
                         showCurrentOrder();
                         break;
                     case "3": 
-                        Console.WriteLine("Email us at customerservice@taqueriadigital.com");
+                        Console.WriteLine("\nEmail us at customerservice@taqueriadigital.com");
                         break;
                     default:
-                        Console.WriteLine("Please make a valid choices.");
+                        Console.WriteLine("\nPlease make a valid choices.");
                         break;
                 }
             } while (userChoice != "4");
 
-            Console.WriteLine("Thank you for your order!");
+            Console.WriteLine("\nThank you for your order!");
         }
 
         private static void showCurrentOrder()
